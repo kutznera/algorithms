@@ -1,3 +1,4 @@
+/*
 const printArrayLength = (arr, numberOfLoops) => {
     console.log(arr.length)
 }
@@ -28,3 +29,19 @@ const printArrayManyTimes = (arr, timesLoops) => {
 printArrayManyTimes([7, 3, 13], 5)
 
 console.log('-----')
+
+*/
+const greets = ["hi", "hello", "hey"];​
+function circularArray(arr, numLoops) {
+    const len = arr.length;
+    let i = 0;​
+    // "i" can grow to infinity,
+    // but "index" will always be bounded by the array length
+    while (i < len * numLoops) {
+        const index = i % len;​
+        console.log(arr[index]);
+        i++;​
+        if (index === len - 1) console.log("---------");
+    };
+
+    circularArray(greets, 7)
